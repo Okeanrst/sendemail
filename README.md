@@ -12,7 +12,7 @@ fastcgi_param PHP_VALUE max_input_time=-1;
 
 ## Install
 
-Download ZIP-archive, unzip it and run
+Use git clone or download ZIP-archive, unzip it and run
 
 ``` bash
 $ composer update
