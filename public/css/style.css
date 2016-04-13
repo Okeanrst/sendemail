@@ -1,0 +1,22 @@
+body {
+    padding: 15px;
+}
+div {
+    margin: 1em;
+    font-size: 14pt;
+}
+#add_file {
+    color: green;
+}
+
+#add_file:hover  {
+    color: rgb(100, 78, 158);
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
