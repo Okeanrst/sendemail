@@ -1,0 +1,10 @@
+{
+    "name": "okeanrst/sendemail",    
+    "license": "MIT",    
+    "require": {
+        "php": ">=5.4",
+        "ezyang/htmlpurifier": "dev-master",
+        "pear/mail_mime": "dev-master",
+        "pear/mail": "dev-master"
+    }
+}
