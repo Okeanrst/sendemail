@@ -12,10 +12,10 @@ fastcgi_param PHP_VALUE max_input_time=-1;
 
 ## Install
 
-Via Composer
+Download ZIP-archive, unzip it and run
 
 ``` bash
-$ composer require okeanrst/sendemail
+$ composer update
 ```
 
 ## License
