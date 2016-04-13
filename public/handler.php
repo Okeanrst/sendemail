@@ -6,7 +6,7 @@
 ini_set('upload_max_size' , '55M');
 ini_set('post_max_size', '50M');
 
-require './vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $serverEmail = 'from@gmail.com';
 
@@ -72,8 +72,8 @@ if ($isPost = isset($_POST['send'])) {
         
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
         foreach ($filesToSend as $fileName) {
-            $type = finfo_file($finfo, './data/'.$fileName);            
-            $mime->addAttachment('./data/'.$fileName, $type, '', true, 'base64', 'attachment', $charset);            
+            $type = finfo_file($finfo, '../data/'.$fileName);            
+            $mime->addAttachment('../data/'.$fileName, $type, '', true, 'base64', 'attachment', $charset);            
         }
         finfo_close($finfo);
 
@@ -88,7 +88,7 @@ if ($isPost = isset($_POST['send'])) {
     }
     
     foreach ($filesToSend as $fileName) {
-        unlink('./data/'.$fileName);
+        unlink('../data/'.$fileName);
     }    
 } else {    
     header("Location: /");
