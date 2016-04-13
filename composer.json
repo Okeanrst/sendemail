@@ -1,10 +1,23 @@
 {
-    "name": "okeanrst/sendemail",    
-    "license": "MIT",    
+    "name": "okeanrst/sendemail",
+    "homepage": "https://github.com/okeanrst/sendemail",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "OkeanRST",
+            "email": "okeanrst@gmail.com",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": ">=5.4",
         "ezyang/htmlpurifier": "dev-master",
         "pear/mail_mime": "dev-master",
         "pear/mail": "dev-master"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
     }
 }
