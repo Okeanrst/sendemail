@@ -8,7 +8,6 @@ To increase the number of uploaded files, edit the file .htaccess or php.ini. Fo
 ``` bash
 fastcgi_param PHP_VALUE max_file_uploads=100;
 fastcgi_param PHP_VALUE max_input_time=-1;
-```
 
 ## Install
 
@@ -17,6 +16,8 @@ Use git clone or download ZIP-archive, unzip it and run
 ``` bash
 $ composer update
 ```
+
+In file handler.php change email.
 
 ## License
 
