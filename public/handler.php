@@ -6,7 +6,7 @@
 ini_set('upload_max_size' , '55M');
 ini_set('post_max_size', '50M');
 
-require 'vendor/autoload.php';
+require './vendor/autoload.php';
 
 $serverEmail = 'from@gmail.com';
 
@@ -44,7 +44,7 @@ if ($isPost = isset($_POST['send'])) {
                 if ($_FILES['uploadfile']['size'][$key] > 0) {
                     $tmp_name = $_FILES['uploadfile']['tmp_name'][$key];
                     $name = $_FILES['uploadfile']['name'][$key];
-                    move_uploaded_file($tmp_name, "data/$name");
+                    move_uploaded_file($tmp_name, "./data/$name");
                     array_push($filesToSend, $name);
                 } else {
                     array_push($errormsg, "Ошибка! Выбранный файл $name пуст.");
@@ -72,8 +72,8 @@ if ($isPost = isset($_POST['send'])) {
         
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
         foreach ($filesToSend as $fileName) {
-            $type = finfo_file($finfo, 'data/'.$fileName);            
-            $mime->addAttachment('data/'.$fileName, $type, '', true, 'base64', 'attachment', $charset);            
+            $type = finfo_file($finfo, './data/'.$fileName);            
+            $mime->addAttachment('./data/'.$fileName, $type, '', true, 'base64', 'attachment', $charset);            
         }
         finfo_close($finfo);
 
@@ -88,7 +88,7 @@ if ($isPost = isset($_POST['send'])) {
     }
     
     foreach ($filesToSend as $fileName) {
-        unlink('data/'.$fileName);
+        unlink('./data/'.$fileName);
     }    
 } else {    
     header("Location: /");
