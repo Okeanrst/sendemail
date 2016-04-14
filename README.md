@@ -11,7 +11,13 @@ fastcgi_param PHP_VALUE max_input_time=-1;
 ```
 ## Install
 
-Use git clone or download ZIP-archive, unzip it and run
+Use command:
+
+``` bash
+$ git clone https://github.com/Okeanrst/sendemail
+```
+
+ or download ZIP-archive, unzip it and run
 
 ``` bash
 $ composer update
